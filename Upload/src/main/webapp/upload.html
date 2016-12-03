@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form method="post" id="fromFileUpload" enctype="multipart/form-data"
+                ng-submit="continueFileUpload()">
+        <div class="form-group">
+            <label class="control-label col-sm-4 col-xs-12" for="quoteIdentifier">Quote Identifier : </label>
+                <div class="col-xs-4 input-max">
+                    <select type="text" class="form-control " name="quoteIdentifier" id="quoteIdentifier" ng-model="quoteIdentifier" ng-options="">
+                    <option style="display: none" value="">Choose</option>
+                    </select>
+                </div>
+                </div>
+        <div class="form-group">
+            <label class="control-label col-sm-4 col-xs-12" for="file">Please upload the file : <span class="required">*</span> </label>
+            <div class="col-xs-4 input-max controls ">
+                <input class="inline-block" type="file" name="file" ng-model="file" data-rule-required="true" id="file"         accept=".csv,.xsl,.xml,.mpp,application/vnd.ms-excel">
+            </div>
+            <span id="vaildFile" class="text-success icon-ok hide">Valid File</span> <span id="invaildFile" class="text-error icon-remove hide"> Invalid File</span>
+        </div>
+        <div class="box-header">
+            <div class="actions">   
+            <button type="submit" class="btn btn-primary">
+                <i class="icon-arrow-right"></i> Continue
+            </button>           
+                </div>
+        </div>    
+</form>
+
+
+
+</body>
+</html>
