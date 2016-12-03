@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<br>
+
+<div class="container" ng-controller="JobController as ctrl">
+
+<div ng-repeat="job in ctrl.jobs">
+ <div class="row">
+   <div class="table-response">
+   <table class="table">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Title</th>
+							<th>Date</th>
+							<th>UserID</th>
+							<th>Status</th>							
+							<th>Qualification</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>	
+							<tr class="success">
+								<td>{{job.id}}</td>
+								<td>{{job.title}}</td>
+								<td>{{job.dateTime}}</td>
+								<td>{{job.userID}}</td>
+								<td>{{job.status}}</td>
+								<td>{{job.qualification}}</td>
+								<td>{{job.description}}</td>
+								 <td><a href=""><button type="button" class="btn btn-primary">ACCEPT</button></a></td>
+                                 <td><a href=""><button type="button" class="btn btn-danger">REJECT</button></a></td>
+							</tr>
+</tbody>
+</table>
+   </div>
+ </div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>
