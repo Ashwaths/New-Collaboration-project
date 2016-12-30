@@ -1,0 +1,39 @@
+<div ng-controller="EventController as ctrl">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div>
+</div>
+
+<div class="container" ng-controller="EventController as ctrl">
+Here is the list of events
+
+< table class="table table-hover">
+             
+      <tr>
+      <th>Event Id</th>
+	<th>Title</th>
+	<th>Information</th>
+	<th>Date Posted</th>
+	<th>Posted By</th>
+	<th>Edit</th>
+	<th>Delete</th>
+  </tr>
+  <tr ng-repeat="event in ctrl.events">
+      <td>{{event.event_id}}</td>
+      <td>{{event.event_title}}</td>
+      <td>{{event.info}}</td>
+       <td>{{event.creation_date}}</td>
+        <td>{{event.user_name}}</td>
+           		
+       <td><a href="#/"><span class="glyphicon glyphicon-ok"> </span></a></td>
+       <td><a href="#/"><span class="glyphicon glyphicon-remove"> </span></a></td>
+   
+           	
+      </tr>
+  
+	 </ table>
+
+
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+

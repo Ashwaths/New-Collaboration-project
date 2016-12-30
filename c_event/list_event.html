@@ -1,0 +1,10 @@
+<br/><br/><br/>
+
+<div class="container" ng-controller="EventController as ctrl">
+<label>Welcome to events</label><br/><br/>
+<div ng-repeat="event in ctrl.events">
+Title: <a href="#/view_event" ng-click="ctrl.getSelectedEvent(event.event_id)">{{event.event_title}}</a>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/>

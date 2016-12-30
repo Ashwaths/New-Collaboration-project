@@ -1,0 +1,24 @@
+<div ng-controller="EventController as ctrl">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div>
+</div>
+
+<br/><br/>
+
+<div class="container" ng-controller="EventController as ctrl">
+<div class="form-group">
+<label>{{selectedEvent.event_title}}</label>
+<br>
+Posted By:<label>{{selectedEvent.user_name}}</label><br/>
+on <p>{{selectedEvent.creation_date}}</p>
+<br>
+<br>
+<p>{{selectedEvent.info}}</p><br/><br/>
+
+<button type="button" ng-click="ctrl.applyForEvent(selectedEvent.event_id)" 
+class="btn btn-warning btn-sm">Comment</button>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/><br/>

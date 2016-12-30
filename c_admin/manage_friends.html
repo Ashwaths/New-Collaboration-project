@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <div id="myDiv" style="background-image:url('resources/images/friend2.jpg');background-repeat: no-repeat; background-size: cover;
+    background-position: center center;"> -->
+<div class="container" ng-controller="FriendController as ctrl">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-5">
+ <img src="resources/images/friend2.jpg" alt="Bootstrap Image Preview" style="width: 350px; height:450px;"> 
+  </div>
+  <div class="col-md-7">
+  <br>
+  <br>
+  <br>
+  <h2>Manage_Friends</h2>
+ <div class="row">
+   <div class="table-response">
+   <table class="table">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>FriendID</th>
+							<th>IsOnLine</th>
+							<th>Status</th>
+							<th>UserID</th>							
+						</tr>
+					</thead>
+					<tbody>
+					
+							<tr ng-repeat="friend in ctrl.friends" class="success" ng-hide="user.id==currentUser.id">
+								<td>{{friend.id}}</td>
+								<td>{{friend.friendID}}</td>
+								<td>{{friend.IsOnline}}</td>
+								<td>{{friend.status}}</td>
+								<td>{{friend.userID}}</td>															
+													
+				<td><button ng-hide="friend.status=='A' || friend.status=='R'" type="button" ng-click="ctrl.friendaccept(friendapplied)" class="btn btn-warning btn-sm">ACCEPT</button></td>
+				
+                <td><button ng-hide="friend.status=='A' || friend.status=='R'" type="button" ng-click="ctrl.friendreject(friendapplied)" class="btn btn-danger">REJECT</button></td>
+					</tr>
+</tbody>
+</table>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
